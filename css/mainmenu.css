@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+}
+
+.body{
+    overflow: hidden;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px
+}
+
+.title{
+    font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700px;
+}
+
+.letters{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.letters h1{
+    transition: 0.1s transform ease-in-out;
+}
+
+.letters h1:hover{
+    display: flex;
+    transform: translateY(-10px);
+}
+
+.btn1{
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+     font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+    background: #222;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px gray;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.watermark{
+    font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+
+.watermark a{
+    font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
