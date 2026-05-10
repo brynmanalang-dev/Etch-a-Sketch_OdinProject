@@ -1,8 +1,8 @@
-## ETCH A SKETCH
+# ETCH A SKETCH
 
 A Interactive drawing board with different colors! Provided by The Odin Project
 
-# FEATURES
+## FEATURES
 
 * Draw / Erase like a Etch a Sketch would
 
