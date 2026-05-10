@@ -25,19 +25,16 @@
     gap: 20px
 }
 
-.title{
-    font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 700px;
-}
-
-.letters{
+.letters {
+    font-family: "Bowlby One SC", sans-serif;
     display: flex;
     flex-direction: row;
-
+    font-weight: 100;
 }
 
 .letters h1{
     transition: 0.1s transform ease-in-out;
+    font-weight: 100;
 }
 
 .letters h1:hover{
@@ -58,7 +55,6 @@
     text-decoration: none;
     color: white;
 }
-
 
 .watermark{
     font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;

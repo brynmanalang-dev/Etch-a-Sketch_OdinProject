@@ -4,7 +4,9 @@
     user-select: none;
 }
 
-body{
+html, body {
+    height: 100%;
+    margin: 0;
     overflow: hidden;
 }
 
@@ -14,6 +16,151 @@ body{
     justify-content: center;
     flex-direction: column;
     gap: 20px;
+
+}
+
+.active{
+    animation: shake 1s infinite;
+}
+
+.show{
+    opacity: 1;
+    display: flex !important;
+}
+
+#canvasUI{
+    z-index: 2;
+    display: none;
+    justify-content: center;
+    align-items: center; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.533);
+}
+
+#top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#exit{
+    display: flex;
+}
+
+#editor {
+    font-weight: 900;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+.letters {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+}
+
+.letters h1:hover{
+    display: flex;
+    transform: translateY(-10px);
+}
+
+#exit svg{
+    height: auto;
+    width: 30px;
+    margin-left: 30px;
+}
+
+#middle{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+}
+
+#middle p {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    max-width: 80%;
+}
+
+#input{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+#input input {
+    width: 100%;
+    max-width: 300px;
+
+    padding: 12px;
+    font-size: 18px;
+
+    border: 2px solid #ccc;
+    border-radius: 8px;
+
+    text-align: center;
+    outline: none;
+}
+
+#input input:focus {
+    border-color: black;
+}
+
+#confirm {
+    width: 100%;
+    max-width: 300px;
+
+    padding: 12px;
+
+    background-color: black;
+    color: white;
+
+    border-radius: 8px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#confirm:hover {
+    transform: scale(1.03);
+}
+
+#canvasInner {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: min(600px, 92vw);
+    padding: 40px 30px;
+
+    border-radius: 15px;
+    gap: 20px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+#canvasUI {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(128, 128, 128, 0.533);
+    z-index: 2;
+}
+
+#canvasUI h1 {
+    font-family: "Bowlby One SC", sans-serif;
+    font-size: clamp(18px, 4vw, 32px);
 }
 
 .cell{
@@ -27,18 +174,23 @@ button{
     transition: 0.5s;
 }
 
-button:hover{
-    transform: translateY(-10px);
+.tools button:hover{
+    transform: translateY(-5px);
 }
 
-.active{
-    animation: shake 1s infinite;
+.tools {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.main2{
+
+.main2 {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     height: 100vh;
+    width: 100%;
 }
 
 .pixel {
@@ -62,9 +214,9 @@ button:hover{
 .container {
     display: flex;
     flex-direction: column;
-    height: 500px;
+    width: min(500px, 90vw);
+    height: min(500px, 90vw);
     margin: 0 auto;
-    width: 500px;
     border: 2px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0px 5px 15px gray;
 }
@@ -81,4 +233,13 @@ button:hover{
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes popUp{
+    0%{
+        transform: scale(0px);
+    }
+    100%{
+        transform: scale(100px);
+    }
 }
